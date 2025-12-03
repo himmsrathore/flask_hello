@@ -94,7 +94,7 @@
   height: 100%;
   background-image: url('/profile.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   opacity: 0.15;
   z-index: 0;
 }
