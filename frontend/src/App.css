@@ -3,6 +3,75 @@
 .portfolio {
   width: 100%;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme (default) */
+.portfolio.light {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.portfolio.light .navbar {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.portfolio.light .card {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.portfolio.light .footer-section {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+/* Dark Theme */
+.portfolio.dark {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+.portfolio.dark .navbar {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+}
+
+.portfolio.dark .navbar-brand {
+  color: #f8f9fa !important;
+}
+
+.portfolio.dark .card {
+  background-color: #2d2d2d;
+  color: #f8f9fa;
+  border: 1px solid #404040 !important;
+}
+
+.portfolio.dark .text-muted {
+  color: #adb5bd !important;
+}
+
+.portfolio.dark .section-title {
+  color: #f8f9fa !important;
+}
+
+.portfolio.dark .footer-section {
+  background-color: #0d0d0d;
+  color: #f8f9fa;
+}
+
+.portfolio.dark .hero-section {
+  background-color: #1a1a1a;
+}
+
+.portfolio.dark .section-padding:nth-child(even) {
+  background-color: #242424;
+}
+
+/* Navbar */
+.navbar {
+  transition: background-color 0.3s ease;
 }
 
 /* Hero Section */
