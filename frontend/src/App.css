@@ -3,16 +3,19 @@
 .portfolio {
   width: 100%;
   min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
 
 /* Navbar Styling */
 .navbar {
-  background: var(--glass-bg) !important;
+  background: rgba(30, 41, 59, 0.8) !important;
+  /* --bg-secondary with opacity */
   backdrop-filter: blur(12px);
-  border-bottom: var(--glass-border);
-  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
 }
 
 .navbar-brand {
@@ -31,11 +34,10 @@
   padding: 2rem 1rem;
   position: relative;
   overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
+  background: var(--bg-color);
+  /* Fallback */
+  background: radial-gradient(circle at 15% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.08) 0%, transparent 25%);
 }
 
 .hero-title {
@@ -43,11 +45,12 @@
   font-weight: 800;
   letter-spacing: -1px;
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
-  color: var(--accent-primary);
+  color: var(--accent-color);
   font-family: var(--font-mono);
   margin-bottom: 1.5rem;
 }
@@ -63,22 +66,22 @@
   width: 45px;
   height: 45px;
   border-radius: 8px;
-  /* Square with rounded corners for coder look */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   transition: all 0.2s ease;
-  background: var(--bg-card);
-  border: var(--glass-border);
-  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
 }
 
 .social-links .btn:hover {
   transform: translateY(-3px);
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  box-shadow: var(--glow-primary);
+  background: var(--bg-secondary);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
 }
 
 /* Section Styling */
@@ -95,15 +98,14 @@
 .section-subtitle {
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--accent-secondary);
+  color: var(--text-secondary);
   margin-bottom: 2rem;
 }
 
-/* Card Styling - Glassmorphism & Compact */
+/* Card Styling */
 .card {
-  background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: var(--glass-border);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.3s ease;
   height: 100%;
@@ -111,25 +113,28 @@
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: var(--accent-secondary);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border-color: var(--primary-color);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .card-body {
   padding: 1.5rem;
 }
 
-/* Skill Cards - Compact Grid */
+/* Skill Cards */
 .skill-card {
   text-align: center;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-tertiary);
   border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .skill-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--accent-primary);
+  background: var(--bg-secondary);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
 }
 
 .skill-icon {
@@ -142,6 +147,7 @@
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 500;
+  color: var(--text-secondary);
 }
 
 /* Project Cards */
@@ -149,19 +155,19 @@
   font-family: var(--font-mono);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--accent-secondary);
+  color: var(--primary-color);
 }
 
 .project-card .badge {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-tertiary);
   color: var(--text-secondary);
   font-family: var(--font-mono);
   font-weight: 400;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
   padding: 0.35em 0.65em;
 }
 
-/* Experience Timeline (Vertical Line) */
+/* Experience Timeline */
 .experience-item {
   position: relative;
   padding-left: 1.5rem;
@@ -177,8 +183,8 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--accent-primary);
-  box-shadow: var(--glow-primary);
+  background: var(--secondary-color);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.5);
 }
 
 .experience-title {
@@ -190,79 +196,23 @@
 
 .experience-period {
   font-size: 0.85rem;
-  color: var(--accent-secondary);
+  color: var(--accent-color);
   margin-bottom: 0.5rem;
   display: block;
-}
-
-/* Dark Theme */
-.portfolio.dark {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-}
-
-.portfolio.dark h1,
-.portfolio.dark h2,
-.portfolio.dark h3,
-.portfolio.dark h4,
-.portfolio.dark h5,
-.portfolio.dark h6,
-.portfolio.dark p,
-.portfolio.dark span,
-.portfolio.dark div,
-.portfolio.dark li,
-.portfolio.dark a {
-  color: var(--text-primary);
-}
-
-.portfolio.dark .text-muted {
-  color: var(--text-secondary) !important;
-}
-
-.portfolio.dark .navbar {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-}
-
-.portfolio.dark .navbar-brand {
-  color: var(--text-primary) !important;
-}
-
-.portfolio.dark .card {
-  background-color: var(--bg-card);
-  color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-.portfolio.dark .section-title {
-  color: var(--text-primary) !important;
-}
-
-.portfolio.dark .footer-section {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-}
-
-.portfolio.dark .hero-section {
-  background-color: var(--bg-primary);
-}
-
-.portfolio.dark .section-padding:nth-child(even) {
-  background-color: var(--bg-secondary);
 }
 
 /* Quote Component */
 .quote-container {
   padding: 3rem 1rem;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .quote-text {
   font-family: var(--font-mono);
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   max-width: 700px;
   margin: 0 auto;
   position: relative;
@@ -271,13 +221,13 @@
 .quote-text::before,
 .quote-text::after {
   content: '"';
-  color: var(--accent-tertiary);
+  color: var(--secondary-color);
   font-size: 1.5rem;
 }
 
 /* Footer */
 .footer-section {
-  border-top: var(--glass-border);
+  border-top: 1px solid var(--border-color);
   background: var(--bg-secondary);
   padding: 2rem 0;
   margin-top: 2rem;
@@ -286,13 +236,22 @@
 .footer-text {
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+}
+
+/* Utilities */
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .section-title {

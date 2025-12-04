@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faGraduationCap, faCode, faBriefcase, faUser, faMoon, faSun, faLanguage, faTerminal, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin, faReact, faPython, faJs, faNode, faDocker, faGit } from '@fortawesome/free-brands-svg-icons'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 const Quote = ({ text }) => (
@@ -427,7 +426,7 @@ function App() {
                           <div className="card-body">
                             <div className="d-flex justify-content-between align-items-start mb-2">
                               <h5 className="card-title mb-0">{project.title}</h5>
-                              {project.status && <span className="badge bg-warning text-dark">{project.status}</span>}
+                              {project.status && <span className="badge warning">{project.status}</span>}
                             </div>
                             <p className="card-text text-muted small mb-3">{project.description}</p>
                             <div className="mb-3">
