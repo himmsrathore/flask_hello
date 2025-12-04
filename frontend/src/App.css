@@ -195,6 +195,62 @@
   display: block;
 }
 
+/* Dark Theme */
+.portfolio.dark {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.portfolio.dark h1,
+.portfolio.dark h2,
+.portfolio.dark h3,
+.portfolio.dark h4,
+.portfolio.dark h5,
+.portfolio.dark h6,
+.portfolio.dark p,
+.portfolio.dark span,
+.portfolio.dark div,
+.portfolio.dark li,
+.portfolio.dark a {
+  color: var(--text-primary);
+}
+
+.portfolio.dark .text-muted {
+  color: var(--text-secondary) !important;
+}
+
+.portfolio.dark .navbar {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.portfolio.dark .navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+.portfolio.dark .card {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.portfolio.dark .section-title {
+  color: var(--text-primary) !important;
+}
+
+.portfolio.dark .footer-section {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.portfolio.dark .hero-section {
+  background-color: var(--bg-primary);
+}
+
+.portfolio.dark .section-padding:nth-child(even) {
+  background-color: var(--bg-secondary);
+}
+
 /* Quote Component */
 .quote-container {
   padding: 3rem 1rem;
