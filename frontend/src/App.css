@@ -11,8 +11,8 @@
 
 /* Navbar Styling */
 .navbar {
-  background: rgba(30, 41, 59, 0.8) !important;
-  /* --bg-secondary with opacity */
+  background: var(--bg-secondary) !important;
+  opacity: 0.95;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   padding: 1rem 0;
@@ -23,6 +23,19 @@
   font-weight: 700;
   letter-spacing: -0.5px;
   color: var(--text-primary) !important;
+}
+
+.navbar .btn {
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  margin-left: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.navbar .btn:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: var(--bg-tertiary);
 }
 
 /* Hero Section */

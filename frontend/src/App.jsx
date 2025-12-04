@@ -505,7 +505,7 @@ function App() {
         <div className="container">
           <h2 className="section-title mb-3">{t.contact.title}</h2>
           <p className="text-muted mb-4">{t.contact.subtitle}</p>
-          <a href={`mailto:${t.email}`} className="btn btn-lg px-5 py-3" style={{ background: 'var(--accent-primary)', color: '#000' }}>
+          <a href={`mailto:${t.email}`} className="btn btn-lg px-5 py-3" style={{ background: 'var(--primary-color)', color: '#fff' }}>
             {t.contact.button}
           </a>
         </div>
