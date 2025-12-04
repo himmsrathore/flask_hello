@@ -1,12 +1,20 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faGraduationCap, faCode, faBriefcase, faUser, faMoon, faSun, faLanguage } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faGraduationCap, faCode, faBriefcase, faUser, faMoon, faSun, faLanguage, faTerminal, faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin, faReact, faPython, faJs, faNode, faDocker, faGit } from '@fortawesome/free-brands-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
+const Quote = ({ text }) => (
+  <div className="quote-container">
+    <div className="quote-text">
+      {text}
+    </div>
+  </div>
+)
+
 function App() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark') // Default to dark for coder aesthetic
   const [language, setLanguage] = useState('en')
 
   const toggleTheme = () => {
@@ -17,9 +25,17 @@ function App() {
     setLanguage(language === 'en' ? 'hi' : 'en')
   }
 
+  const quotes = [
+    "There are 10 types of people in the world: those who understand binary, and those who don't.",
+    "I don't always test my code, but when I do, I do it in production.",
+    "Debuggers don't remove bugs. They only show them in slow motion.",
+    "Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science."
+  ]
+
   const content = {
     en: {
-      name: 'HIMMAT SINGH RATHORE (WhiteHawk)',
+      name: 'HIMMAT SINGH RATHORE',
+      handle: '@WhiteHawk',
       title: 'Executive – CRIS | Python Developer | Power BI Analyst | Full Stack & Flutter Developer',
       tagline: 'Merging IT expertise with operational understanding to build high-impact digital systems',
       location: 'Mumbai / Delhi',
@@ -29,16 +45,16 @@ function App() {
       brand: 'WhiteHawk',
       about: {
         title: 'About Me',
-        subtitle: 'A result-oriented technology professional with 10+ years of combined experience',
+        subtitle: '10+ years experience',
         text: 'A result-oriented technology professional with 10+ years of combined experience in Data Analytics & Visualization (Python, Power BI, Qlik), Full-Stack Development (Laravel, MySQL, PHP), Mobile App Development (Flutter), and Railway Operational Systems (CRIS & MMCT Division). I merge IT expertise with deep operational understanding to build high-impact digital systems for analytics, automation & workforce efficiency.'
       },
       skills: {
-        title: 'Skills & Technologies',
-        subtitle: 'Technologies I work with'
+        title: 'Tech Stack',
+        subtitle: 'Tools & Technologies'
       },
       experience: {
-        title: 'Professional Experience',
-        subtitle: '10+ years of technology and operational expertise',
+        title: 'Experience',
+        subtitle: 'Professional Timeline',
         jobs: [
           {
             title: 'Executive – CRIS',
@@ -59,7 +75,7 @@ function App() {
       },
       education: {
         title: 'Education',
-        subtitle: 'My academic background',
+        subtitle: 'Academic Background',
         degree: 'B.Tech – Computer Science Engineering',
         institution: 'Rajasthan Technical University, Kota',
         year: '2009 - 2013',
@@ -67,11 +83,11 @@ function App() {
       },
       projects: {
         title: 'Projects',
-        subtitle: 'Analytics, Web Applications & Mobile Apps',
+        subtitle: 'Analytics • Web • Mobile',
         categories: ['Analytics & Dashboards', 'Web Projects', 'Mobile Apps']
       },
       highlights: {
-        title: 'Key Highlights',
+        title: 'Highlights',
         items: [
           'Created 15+ dashboards used by Divisional & HQ Railway teams',
           'Built 10+ web systems (Laravel/Python) for operations, safety & analytics',
@@ -81,13 +97,14 @@ function App() {
         ]
       },
       contact: {
-        title: 'Get In Touch',
-        subtitle: "I'm always open to discussing new projects and opportunities.",
-        button: 'Contact Me'
+        title: 'Contact',
+        subtitle: "Let's build something amazing together.",
+        button: 'Get In Touch'
       }
     },
     hi: {
-      name: 'हिम्मत सिंह राठौर (WhiteHawk)',
+      name: 'हिम्मत सिंह राठौर',
+      handle: '@WhiteHawk',
       title: 'कार्यकारी – CRIS | पायथन डेवलपर | पावर बीआई विश्लेषक | फुल स्टैक और फ्लटर डेवलपर',
       tagline: 'उच्च प्रभाव वाली डिजिटल प्रणालियों के निर्माण के लिए आईटी विशेषज्ञता को परिचालन समझ के साथ मिलाना',
       location: 'मुंबई / दिल्ली',
@@ -97,16 +114,16 @@ function App() {
       brand: 'WhiteHawk',
       about: {
         title: 'मेरे बारे में',
-        subtitle: '10+ वर्षों के संयुक्त अनुभव के साथ परिणाम-उन्मुख प्रौद्योगिकी पेशेवर',
+        subtitle: '10+ वर्षों का अनुभव',
         text: 'डेटा एनालिटिक्स और विज़ुअलाइज़ेशन (पायथन, पावर बीआई, क्लिक), फुल-स्टैक डेवलपमेंट (लारावेल, MySQL, PHP), मोबाइल ऐप डेवलपमेंट (फ्लटर), और रेलवे परिचालन प्रणाली (CRIS और MMCT डिवीजन) में 10+ वर्षों के संयुक्त अनुभव के साथ एक परिणाम-उन्मुख प्रौद्योगिकी पेशेवर। मैं एनालिटिक्स, स्वचालन और कार्यबल दक्षता के लिए उच्च प्रभाव वाली डिजिटल प्रणालियों के निर्माण हेतु आईटी विशेषज्ञता को गहरी परिचालन समझ के साथ मिलाता हूं।'
       },
       skills: {
-        title: 'कौशल और प्रौद्योगिकियां',
-        subtitle: 'जिन तकनीकों के साथ मैं काम करता हूं'
+        title: 'तकनीकी स्टैक',
+        subtitle: 'उपकरण और प्रौद्योगिकियां'
       },
       experience: {
-        title: 'व्यावसायिक अनुभव',
-        subtitle: '10+ वर्षों की प्रौद्योगिकी और परिचालन विशेषज्ञता',
+        title: 'अनुभव',
+        subtitle: 'व्यावसायिक समयरेखा',
         jobs: [
           {
             title: 'कार्यकारी – CRIS',
@@ -127,7 +144,7 @@ function App() {
       },
       education: {
         title: 'शिक्षा',
-        subtitle: 'मेरी शैक्षणिक पृष्ठभूमि',
+        subtitle: 'शैक्षणिक पृष्ठभूमि',
         degree: 'बी.टेक – कंप्यूटर विज्ञान इंजीनियरिंग',
         institution: 'राजस्थान तकनीकी विश्वविद्यालय, कोटा',
         year: '2009 - 2013',
@@ -135,7 +152,7 @@ function App() {
       },
       projects: {
         title: 'परियोजनाएं',
-        subtitle: 'एनालिटिक्स, वेब एप्लिकेशन और मोबाइल ऐप्स',
+        subtitle: 'एनालिटिक्स • वेब • मोबाइल',
         categories: ['एनालिटिक्स और डैशबोर्ड', 'वेब परियोजनाएं', 'मोबाइल ऐप्स']
       },
       highlights: {
@@ -150,8 +167,8 @@ function App() {
       },
       contact: {
         title: 'संपर्क करें',
-        subtitle: 'मैं हमेशा नई परियोजनाओं और अवसरों पर चर्चा के लिए तैयार हूं।',
-        button: 'मुझसे संपर्क करें'
+        subtitle: 'आइए कुछ अद्भुत बनाएं।',
+        button: 'संपर्क करें'
       }
     }
   }
@@ -176,152 +193,98 @@ function App() {
   const projectsData = {
     'Analytics & Dashboards': [
       {
-        title: 'Block Productivity Analysis – Engineering',
-        description: 'Analysis of machine utilization, falling productivity, and KPI-based recommendations for engineering operations.',
-        technologies: ['Looker Studio', 'Data Analytics', 'KPI Tracking'],
+        title: 'Block Productivity Analysis',
+        description: 'Analysis of machine utilization, falling productivity, and KPI-based recommendations.',
+        technologies: ['Looker Studio', 'Data Analytics'],
         link: 'https://datastudio.google.com/reporting/22f59a49-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
         type: 'dashboard'
       },
       {
-        title: 'Online Engine Book – BL Interchange Dashboard',
-        description: 'Real-time interchange monitoring, PU position tracking, loading analysis, and daily report automation.',
-        technologies: ['Looker Studio', 'Real-time Data', 'Automation'],
+        title: 'Online Engine Book',
+        description: 'Real-time interchange monitoring, PU position tracking, loading analysis.',
+        technologies: ['Looker Studio', 'Real-time Data'],
         link: 'https://datastudio.google.com/reporting/f9e11ec6-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
         type: 'dashboard'
       },
       {
-        title: 'HDN Speed Analysis Dashboard',
-        description: 'Network speed KPIs, restrictions monitoring, and section-wise performance analysis for railway operations.',
-        technologies: ['Looker Studio', 'Performance Analytics', 'Network Monitoring'],
+        title: 'HDN Speed Analysis',
+        description: 'Network speed KPIs, restrictions monitoring, and section-wise performance analysis.',
+        technologies: ['Looker Studio', 'Performance Analytics'],
         link: 'https://datastudio.google.com/reporting/dfcd7114-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
         type: 'dashboard'
       },
       {
-        title: 'DRM IT Cell Analytics Dashboard',
-        description: 'Division-level data insights and analytics for decision-making support at divisional management level.',
-        technologies: ['Looker Studio', 'Business Intelligence', 'Decision Support'],
+        title: 'DRM IT Cell Analytics',
+        description: 'Division-level data insights and analytics for decision-making support.',
+        technologies: ['Looker Studio', 'BI'],
         link: 'https://datastudio.google.com/reporting/349530f9-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
         type: 'dashboard'
       },
       {
-        title: 'CRIS Internal Analytics Portal',
-        description: 'Comprehensive operational dashboards and analytics platform for Indian Railways internal operations.',
-        technologies: ['Python', 'Power BI', 'Data Engineering'],
+        title: 'CRIS Internal Analytics',
+        description: 'Comprehensive operational dashboards and analytics platform.',
+        technologies: ['Python', 'Power BI'],
         link: 'https://analytics.cris.org.in',
         type: 'internal'
       }
     ],
     'Web Projects': [
       {
-        title: 'eOPT GBCT – Unusual Reporting System',
-        description: 'Real-time unusual reporting and analysis system with asset failure tracking, PDF generation, and dashboard analytics.',
-        technologies: ['Laravel', 'MySQL', 'PDF Generation', 'Analytics'],
+        title: 'eOPT GBCT',
+        description: 'Real-time unusual reporting and analysis system with asset failure tracking.',
+        technologies: ['Laravel', 'MySQL'],
         link: 'https://www.eoptgbct.in',
         github: 'https://github.com/himmsrathore'
       },
       {
-        title: 'MyCBT – Railway LDCE Exam Platform',
-        description: 'Comprehensive exam preparation platform with 150+ tests, 10,000+ questions, analytics, videos, and community features.',
-        technologies: ['Laravel', 'MySQL', 'Analytics', 'Video Platform'],
+        title: 'MyCBT Exam Platform',
+        description: 'Comprehensive exam preparation platform with 150+ tests and analytics.',
+        technologies: ['Laravel', 'MySQL'],
         link: 'https://mycbt.in',
         github: 'https://github.com/himmsrathore'
       },
       {
-        title: 'Rawla – Community Platform',
-        description: 'Profile network system designed for community members to connect and collaborate.',
-        technologies: ['Laravel', 'MySQL', 'Social Network'],
+        title: 'Rawla Community',
+        description: 'Profile network system designed for community members to connect.',
+        technologies: ['Laravel', 'MySQL'],
         link: 'https://rawla.in',
         github: 'https://github.com/himmsrathore'
       },
       {
-        title: '7Step – Learning & Earning Platform',
-        description: 'Technology learning platform with modules, dashboards, user analytics, and earning opportunities.',
-        technologies: ['Laravel', 'MySQL', 'Analytics', 'E-learning'],
+        title: '7Step Learning',
+        description: 'Technology learning platform with modules and user analytics.',
+        technologies: ['Laravel', 'MySQL'],
         link: 'https://7step.in',
         github: 'https://github.com/himmsrathore'
       },
       {
-        title: 'Western Railway Library',
-        description: 'Digital library platform for Western Railway with comprehensive book management and user access system.',
-        technologies: ['Laravel', 'MySQL', 'Library Management'],
+        title: 'WR Library',
+        description: 'Digital library platform for Western Railway with book management.',
+        technologies: ['Laravel', 'MySQL'],
         link: 'https://books.mycbt.in',
-        github: 'https://github.com/himmsrathore'
-      },
-      {
-        title: 'myLibrary – Smart Library Management',
-        description: 'Complete library management system with seat booking, attendance tracking, membership payments, and admin panel.',
-        technologies: ['Laravel', 'MySQL', 'Payment Integration', 'Booking System'],
-        link: 'https://library.7step.in',
-        github: 'https://github.com/himmsrathore'
-      },
-      {
-        title: 'Online Safety & Inspection System',
-        description: 'Automated SS/TI/LC inspections with PDF email generation and real-time compliance monitoring.',
-        technologies: ['Laravel', 'MySQL', 'PDF Generation', 'Email Automation'],
-        link: '#',
-        github: 'https://github.com/himmsrathore'
-      },
-      {
-        title: 'e-Election Module – MMCT Division',
-        description: 'Secure election management system with voting, results processing, and comprehensive dashboards.',
-        technologies: ['Laravel', 'MySQL', 'Security', 'Voting System'],
-        link: '#',
-        github: 'https://github.com/himmsrathore'
-      },
-      {
-        title: 'EMU Maintenance Module',
-        description: 'Maintenance workflow management system for EMU Shed MMCT operations.',
-        technologies: ['Laravel', 'MySQL', 'Workflow Management'],
-        link: '#',
-        github: 'https://github.com/himmsrathore'
-      },
-      {
-        title: 'Operating Department Portal',
-        description: 'Digitized operational workflows platform for railway staff and department operations.',
-        technologies: ['Laravel', 'MySQL', 'Workflow Automation'],
-        link: 'http://10.34.2.55/assets/deppt/Operating/',
         github: 'https://github.com/himmsrathore'
       }
     ],
     'Mobile Apps': [
       {
-        title: 'myLibrary Mobile App',
-        description: 'Mobile application for library management with seat booking and membership features.',
-        technologies: ['Flutter', 'Dart', 'Firebase'],
+        title: 'myLibrary App',
+        description: 'Mobile application for library management.',
+        technologies: ['Flutter', 'Firebase'],
         link: '#',
-        github: 'https://github.com/himmsrathore',
         status: 'Coming Soon'
       },
       {
-        title: 'CBT Preparation App',
-        description: 'Mobile exam preparation app for railway competitive exams with offline support.',
-        technologies: ['Flutter', 'Dart', 'SQLite'],
+        title: 'CBT Prep App',
+        description: 'Mobile exam preparation app for railway exams.',
+        technologies: ['Flutter', 'SQLite'],
         link: '#',
-        github: 'https://github.com/himmsrathore',
         status: 'Coming Soon'
       },
       {
-        title: 'Rawla App (Beta)',
-        description: 'Mobile version of the Rawla community platform for on-the-go networking.',
-        technologies: ['Flutter', 'Dart', 'REST API'],
+        title: 'Rawla App',
+        description: 'Mobile version of the Rawla community platform.',
+        technologies: ['Flutter', 'REST API'],
         link: '#',
-        github: 'https://github.com/himmsrathore',
-        status: 'Coming Soon'
-      },
-      {
-        title: '7Step Learning App',
-        description: 'Mobile learning platform for technology courses and skill development.',
-        technologies: ['Flutter', 'Dart', 'Video Streaming'],
-        link: '#',
-        github: 'https://github.com/himmsrathore',
-        status: 'Coming Soon'
-      },
-      {
-        title: 'Internal CRIS Utilities',
-        description: 'Python and Flutter based utility tools for internal CRIS operations.',
-        technologies: ['Flutter', 'Python', 'Dart'],
-        link: '#',
-        github: 'https://github.com/himmsrathore',
         status: 'Coming Soon'
       }
     ]
@@ -329,25 +292,19 @@ function App() {
 
   return (
     <div className={`portfolio ${theme}`} data-theme={theme}>
-      {/* Top Navigation Bar with Toggles */}
-      <nav className="navbar navbar-expand-lg sticky-top border-bottom">
-        <div className="container-fluid">
-          <span className="navbar-brand fw-bold">{t.name}</span>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg sticky-top">
+        <div className="container-fluid px-4">
+          <span className="navbar-brand">
+            <FontAwesomeIcon icon={faTerminal} className="me-2 text-accent" />
+            {t.brand}
+          </span>
           <div className="d-flex gap-2">
-            <button
-              className="btn btn-outline-secondary btn-sm"
-              onClick={toggleTheme}
-              title={theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            >
+            <button className="btn btn-sm" onClick={toggleTheme} title="Toggle Theme">
               <FontAwesomeIcon icon={theme === 'light' ? faMoon : faSun} />
             </button>
-            <button
-              className="btn btn-outline-secondary btn-sm"
-              onClick={toggleLanguage}
-              title={language === 'en' ? 'हिंदी' : 'English'}
-            >
-              <FontAwesomeIcon icon={faLanguage} className="me-1" />
-              {language === 'en' ? 'हिं' : 'EN'}
+            <button className="btn btn-sm" onClick={toggleLanguage} title="Toggle Language">
+              <FontAwesomeIcon icon={faLanguage} />
             </button>
           </div>
         </div>
@@ -357,18 +314,18 @@ function App() {
       <section className="hero-section">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-8 text-center">
-              <h1 className="display-3 fw-bold mb-3">{t.name}</h1>
-              <p className="lead text-primary fw-semibold mb-3">{t.title}</p>
-              <p className="text-muted mb-4">{t.tagline}</p>
+            <div className="col-lg-10 text-center hero-content">
+              <h1 className="hero-title display-4">{t.name}</h1>
+              <p className="hero-subtitle">{t.handle} | {t.title}</p>
+              <p className="lead text-muted mb-4" style={{ maxWidth: '700px', margin: '0 auto' }}>{t.tagline}</p>
               <div className="social-links">
-                <a href="https://github.com/himmsrathore" target="_blank" rel="noopener noreferrer" className="btn btn-outline-dark btn-lg">
+                <a href="https://github.com/himmsrathore" target="_blank" rel="noopener noreferrer" className="btn">
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="https://linkedin.com/in/himmsrathore" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-lg">
+                <a href="https://linkedin.com/in/himmsrathore" target="_blank" rel="noopener noreferrer" className="btn">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href="mailto:himmsrathore@gmail.com" className="btn btn-outline-danger btn-lg">
+                <a href={`mailto:${t.email}`} className="btn">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </a>
               </div>
@@ -377,23 +334,45 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      <Quote text={quotes[0]} />
+
+      {/* About & Skills Grid */}
       <section className="section-padding">
         <div className="container-fluid px-4">
-          <div className="row justify-content-center mb-4">
-            <div className="col-12 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faUser} />
+          <div className="row g-4 justify-content-center">
+            {/* About */}
+            <div className="col-lg-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <h3 className="section-title h4">
+                    <FontAwesomeIcon icon={faUser} className="me-2 text-accent" />
+                    {t.about.title}
+                  </h3>
+                  <p className="section-subtitle">{t.about.subtitle}</p>
+                  <p className="text-muted">{t.about.text}</p>
+                </div>
               </div>
-              <h2 className="section-title">{t.about.title}</h2>
-              <p className="section-subtitle text-muted">{t.about.subtitle}</p>
             </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="card shadow-sm border-0">
-                <div className="card-body p-4">
-                  <p className="card-text text-muted mb-0">{t.about.text}</p>
+
+            {/* Skills */}
+            <div className="col-lg-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <h3 className="section-title h4">
+                    <FontAwesomeIcon icon={faCode} className="me-2 text-accent" />
+                    {t.skills.title}
+                  </h3>
+                  <p className="section-subtitle">{t.skills.subtitle}</p>
+                  <div className="row g-2">
+                    {skills.map((skill, index) => (
+                      <div key={index} className="col-4 col-md-3">
+                        <div className="skill-card rounded">
+                          <FontAwesomeIcon icon={skill.icon} style={{ color: skill.color }} className="skill-icon" />
+                          <div className="skill-name">{skill.name}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -401,165 +380,120 @@ function App() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="section-padding">
-        <div className="container-fluid px-4">
-          <div className="row justify-content-center mb-4">
-            <div className="col-12 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faCode} />
-              </div>
-              <h2 className="section-title">{t.skills.title}</h2>
-              <p className="section-subtitle text-muted">{t.skills.subtitle}</p>
-            </div>
-          </div>
-          <div className="row g-4 justify-content-center">
-            {skills.map((skill, index) => (
-              <div key={index} className="col-6 col-md-4 col-lg-2">
-                <div className="card skill-card h-100 text-center shadow-sm border-0">
-                  <div className="card-body">
-                    <FontAwesomeIcon icon={skill.icon} style={{ color: skill.color }} className="skill-icon mb-3" />
-                    <h6 className="card-title mb-0">{skill.name}</h6>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Quote text={quotes[1]} />
 
       {/* Experience Section */}
       <section className="section-padding">
         <div className="container-fluid px-4">
-          <div className="row justify-content-center mb-4">
-            <div className="col-12 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faBriefcase} />
-              </div>
-              <h2 className="section-title">{t.experience.title}</h2>
-              <p className="section-subtitle text-muted">{t.experience.subtitle}</p>
-            </div>
-          </div>
-          <div className="row g-4 justify-content-center">
-            {t.experience.jobs.map((job, index) => (
-              <div key={index} className="col-lg-10">
-                <div className="card shadow-sm border-0">
-                  <div className="card-body p-4">
-                    <h5 className="card-title fw-bold mb-2">{job.title}</h5>
-                    <p className="text-primary mb-3">{job.period}</p>
-                    <p className="card-text text-muted mb-0">{job.description}</p>
-                  </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <h2 className="text-center section-title mb-5">
+                <span className="text-gradient">{t.experience.title}</span>
+              </h2>
+              <div className="card">
+                <div className="card-body">
+                  {t.experience.jobs.map((job, index) => (
+                    <div key={index} className="experience-item">
+                      <h5 className="experience-title">{job.title}</h5>
+                      <span className="experience-period">{job.period}</span>
+                      <p className="text-muted mb-0">{job.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Education Section */}
-      <section className="section-padding">
-        <div className="container-fluid px-4">
-          <div className="row justify-content-center mb-4">
-            <div className="col-12 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faGraduationCap} />
-              </div>
-              <h2 className="section-title">{t.education.title}</h2>
-              <p className="section-subtitle text-muted">{t.education.subtitle}</p>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="card shadow-sm border-0">
-                <div className="card-body p-4">
-                  <h5 className="card-title fw-bold mb-2">{t.education.degree}</h5>
-                  <h6 className="text-primary mb-2">{t.education.institution}</h6>
-                  <p className="text-muted small mb-3">{t.education.year}</p>
-                  <p className="card-text text-muted mb-0">{t.education.description}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Quote text={quotes[2]} />
 
       {/* Projects Section */}
       <section className="section-padding">
         <div className="container-fluid px-4">
-          <div className="row justify-content-center mb-4">
-            <div className="col-12 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faCode} />
-              </div>
-              <h2 className="section-title">{t.projects.title}</h2>
-              <p className="section-subtitle text-muted">{t.projects.subtitle}</p>
-            </div>
-          </div>
+          <h2 className="text-center section-title mb-5">
+            <span className="text-gradient">{t.projects.title}</span>
+          </h2>
 
-          {/* Project Categories */}
-          {Object.entries(projectsData).map(([category, projects], catIndex) => (
-            <div key={catIndex} className="mb-5">
-              <h3 className="text-center mb-4 fw-bold">{category}</h3>
-              <div className="row g-4 justify-content-center">
-                {projects.map((project, index) => (
-                  <div key={index} className="col-md-6 col-lg-4">
-                    <div className="card project-card h-100 shadow-sm border-0">
-                      <div className="card-body d-flex flex-column">
-                        <h5 className="card-title fw-bold mb-3">{project.title}</h5>
-                        {project.status && (
-                          <span className="badge bg-warning text-dark mb-2 align-self-start">{project.status}</span>
-                        )}
-                        <p className="card-text text-muted flex-grow-1">{project.description}</p>
-                        <div className="mb-3">
-                          {project.technologies.map((tech, i) => (
-                            <span key={i} className="badge bg-primary bg-opacity-10 text-primary me-2 mb-2">{tech}</span>
-                          ))}
-                        </div>
-                        <div className="d-flex gap-2">
-                          {project.link && project.link !== '#' && (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-                              {project.type === 'dashboard' ? 'View Dashboard' : project.type === 'internal' ? 'Internal Portal' : 'Live Demo'}
-                            </a>
-                          )}
-                          {project.github && (
-                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                              <FontAwesomeIcon icon={faGithub} className="me-1" /> Code
-                            </a>
-                          )}
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              {Object.entries(projectsData).map(([category, projects], catIndex) => (
+                <div key={catIndex} className="mb-5">
+                  <h4 className="mb-4 font-mono text-accent border-bottom pb-2 d-inline-block">{category}</h4>
+                  <div className="row g-3">
+                    {projects.map((project, index) => (
+                      <div key={index} className="col-md-6 col-lg-4">
+                        <div className="card project-card h-100">
+                          <div className="card-body">
+                            <div className="d-flex justify-content-between align-items-start mb-2">
+                              <h5 className="card-title mb-0">{project.title}</h5>
+                              {project.status && <span className="badge bg-warning text-dark">{project.status}</span>}
+                            </div>
+                            <p className="card-text text-muted small mb-3">{project.description}</p>
+                            <div className="mb-3">
+                              {project.technologies.map((tech, i) => (
+                                <span key={i} className="badge me-1 mb-1">{tech}</span>
+                              ))}
+                            </div>
+                            <div className="d-flex gap-2 mt-auto">
+                              {project.link && project.link !== '#' && (
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-accent small text-decoration-none">
+                                  View Project →
+                                </a>
+                              )}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
-      {/* Highlights Section */}
+      <Quote text={quotes[3]} />
+
+      {/* Highlights & Education Grid */}
       <section className="section-padding">
         <div className="container-fluid px-4">
-          <div className="row justify-content-center mb-4">
-            <div className="col-12 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faBriefcase} />
-              </div>
-              <h2 className="section-title">{t.highlights.title}</h2>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="card shadow-sm border-0">
-                <div className="card-body p-4">
-                  <ul className="list-unstyled mb-0">
+          <div className="row g-4 justify-content-center">
+            {/* Highlights */}
+            <div className="col-lg-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <h3 className="section-title h4">
+                    <FontAwesomeIcon icon={faBriefcase} className="me-2 text-accent" />
+                    {t.highlights.title}
+                  </h3>
+                  <ul className="list-unstyled mt-3">
                     {t.highlights.items.map((item, index) => (
                       <li key={index} className="mb-3 d-flex align-items-start">
-                        <span className="text-primary me-3">✓</span>
-                        <span className="text-muted">{item}</span>
+                        <span className="text-accent me-2">➜</span>
+                        <span className="text-muted small">{item}</span>
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Education */}
+            <div className="col-lg-5">
+              <div className="card h-100">
+                <div className="card-body">
+                  <h3 className="section-title h4">
+                    <FontAwesomeIcon icon={faGraduationCap} className="me-2 text-accent" />
+                    {t.education.title}
+                  </h3>
+                  <div className="mt-3">
+                    <h5 className="font-mono fw-bold">{t.education.degree}</h5>
+                    <p className="text-accent mb-1">{t.education.institution}</p>
+                    <p className="text-muted small mb-2">{t.education.year}</p>
+                    <p className="text-muted small">{t.education.description}</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -568,27 +502,20 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding">
-        <div className="container-fluid px-4">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 text-center">
-              <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </div>
-              <h2 className="section-title">{t.contact.title}</h2>
-              <p className="section-subtitle text-muted mb-4">{t.contact.subtitle}</p>
-              <a href="mailto:himmsrathore@gmail.com" className="btn btn-primary btn-lg">
-                <FontAwesomeIcon icon={faEnvelope} className="me-2" /> {t.contact.button}
-              </a>
-            </div>
-          </div>
+      <section className="section-padding text-center">
+        <div className="container">
+          <h2 className="section-title mb-3">{t.contact.title}</h2>
+          <p className="text-muted mb-4">{t.contact.subtitle}</p>
+          <a href={`mailto:${t.email}`} className="btn btn-lg px-5 py-3" style={{ background: 'var(--accent-primary)', color: '#000' }}>
+            {t.contact.button}
+          </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer-section text-center py-4">
+      <footer className="footer-section text-center">
         <div className="container">
-          <p className="mb-0">&copy; 2025 {t.name}. All rights reserved.</p>
+          <p className="footer-text mb-0">&copy; 2025 {t.brand}. Built with React & Coffee.</p>
         </div>
       </footer>
     </div>
