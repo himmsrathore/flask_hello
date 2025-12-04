@@ -19,29 +19,66 @@ function App() {
 
   const content = {
     en: {
-      name: 'Himmat Singh Rathore',
-      title: 'Full Stack Developer',
-      tagline: 'Building elegant solutions to complex problems',
+      name: 'HIMMAT SINGH RATHORE (WhiteHawk)',
+      title: 'Executive – CRIS | Python Developer | Power BI Analyst | Full Stack & Flutter Developer',
+      tagline: 'Merging IT expertise with operational understanding to build high-impact digital systems',
+      location: 'Mumbai / Delhi',
+      phone: '+91-7737264778',
+      email: 'himmsrathore@gmail.com',
+      portfolio: 'himmsrathore.com',
+      brand: 'WhiteHawk',
       about: {
         title: 'About Me',
-        subtitle: 'Get to know more about my background',
-        text: 'Passionate full-stack developer with expertise in building scalable web applications. I love turning ideas into reality through clean, efficient code. With a strong foundation in both frontend and backend technologies, I create seamless user experiences backed by robust server-side logic.'
+        subtitle: 'A result-oriented technology professional with 10+ years of combined experience',
+        text: 'A result-oriented technology professional with 10+ years of combined experience in Data Analytics & Visualization (Python, Power BI, Qlik), Full-Stack Development (Laravel, MySQL, PHP), Mobile App Development (Flutter), and Railway Operational Systems (CRIS & MMCT Division). I merge IT expertise with deep operational understanding to build high-impact digital systems for analytics, automation & workforce efficiency.'
       },
       skills: {
         title: 'Skills & Technologies',
         subtitle: 'Technologies I work with'
       },
+      experience: {
+        title: 'Professional Experience',
+        subtitle: '10+ years of technology and operational expertise',
+        jobs: [
+          {
+            title: 'Executive – CRIS',
+            period: '2023–Present',
+            description: 'Python automation, Power BI dashboards, data engineering, building web & mobile solutions for Indian Railways.'
+          },
+          {
+            title: 'Divisional Traffic Inspector – Indian Railways',
+            period: '2017–2023',
+            description: 'Created digital platforms for Unusual Reporting, Safety Compliance, Caution Orders, Staff Training, and Inspection Automation.'
+          },
+          {
+            title: 'Sr. Software Engineer – CoreTechies',
+            period: '2013–2017',
+            description: 'PHP/Laravel development, UI/UX design, multi-project management.'
+          }
+        ]
+      },
       education: {
         title: 'Education',
         subtitle: 'My academic background',
-        degree: 'Bachelor of Technology in Computer Science',
-        institution: 'University of Technology',
-        year: '2019 - 2023',
-        description: 'Specialized in software engineering and web development. Graduated with honors.'
+        degree: 'B.Tech – Computer Science Engineering',
+        institution: 'Rajasthan Technical University, Kota',
+        year: '2009 - 2013',
+        description: 'Final-Year Project: Cryptography using Public/Private Key'
       },
       projects: {
         title: 'Projects',
-        subtitle: 'Some of my recent work'
+        subtitle: 'Analytics, Web Applications & Mobile Apps',
+        categories: ['Analytics & Dashboards', 'Web Projects', 'Mobile Apps']
+      },
+      highlights: {
+        title: 'Key Highlights',
+        items: [
+          'Created 15+ dashboards used by Divisional & HQ Railway teams',
+          'Built 10+ web systems (Laravel/Python) for operations, safety & analytics',
+          'Developed multiple mobile apps using Flutter',
+          'Led digital transformation initiatives across MMCT Division',
+          'Conducted staff digital training (500+ daily participants during lockdown)'
+        ]
       },
       contact: {
         title: 'Get In Touch',
@@ -50,29 +87,66 @@ function App() {
       }
     },
     hi: {
-      name: 'हिम्मत सिंह राठौर',
-      title: 'फुल स्टैक डेवलपर',
-      tagline: 'जटिल समस्याओं के लिए सुरुचिपूर्ण समाधान बनाना',
+      name: 'हिम्मत सिंह राठौर (WhiteHawk)',
+      title: 'कार्यकारी – CRIS | पायथन डेवलपर | पावर बीआई विश्लेषक | फुल स्टैक और फ्लटर डेवलपर',
+      tagline: 'उच्च प्रभाव वाली डिजिटल प्रणालियों के निर्माण के लिए आईटी विशेषज्ञता को परिचालन समझ के साथ मिलाना',
+      location: 'मुंबई / दिल्ली',
+      phone: '+91-7737264778',
+      email: 'himmsrathore@gmail.com',
+      portfolio: 'himmsrathore.com',
+      brand: 'WhiteHawk',
       about: {
         title: 'मेरे बारे में',
-        subtitle: 'मेरी पृष्ठभूमि के बारे में अधिक जानें',
-        text: 'स्केलेबल वेब एप्लिकेशन बनाने में विशेषज्ञता वाला एक भावुक फुल-स्टैक डेवलपर। मुझे स्वच्छ, कुशल कोड के माध्यम से विचारों को वास्तविकता में बदलना पसंद है।'
+        subtitle: '10+ वर्षों के संयुक्त अनुभव के साथ परिणाम-उन्मुख प्रौद्योगिकी पेशेवर',
+        text: 'डेटा एनालिटिक्स और विज़ुअलाइज़ेशन (पायथन, पावर बीआई, क्लिक), फुल-स्टैक डेवलपमेंट (लारावेल, MySQL, PHP), मोबाइल ऐप डेवलपमेंट (फ्लटर), और रेलवे परिचालन प्रणाली (CRIS और MMCT डिवीजन) में 10+ वर्षों के संयुक्त अनुभव के साथ एक परिणाम-उन्मुख प्रौद्योगिकी पेशेवर। मैं एनालिटिक्स, स्वचालन और कार्यबल दक्षता के लिए उच्च प्रभाव वाली डिजिटल प्रणालियों के निर्माण हेतु आईटी विशेषज्ञता को गहरी परिचालन समझ के साथ मिलाता हूं।'
       },
       skills: {
         title: 'कौशल और प्रौद्योगिकियां',
         subtitle: 'जिन तकनीकों के साथ मैं काम करता हूं'
       },
+      experience: {
+        title: 'व्यावसायिक अनुभव',
+        subtitle: '10+ वर्षों की प्रौद्योगिकी और परिचालन विशेषज्ञता',
+        jobs: [
+          {
+            title: 'कार्यकारी – CRIS',
+            period: '2023–वर्तमान',
+            description: 'पायथन स्वचालन, पावर बीआई डैशबोर्ड, डेटा इंजीनियरिंग, भारतीय रेलवे के लिए वेब और मोबाइल समाधान निर्माण।'
+          },
+          {
+            title: 'डिवीजनल ट्रैफिक इंस्पेक्टर – भारतीय रेलवे',
+            period: '2017–2023',
+            description: 'असामान्य रिपोर्टिंग, सुरक्षा अनुपालन, सावधानी आदेश, कर्मचारी प्रशिक्षण और निरीक्षण स्वचालन के लिए डिजिटल प्लेटफॉर्म बनाए।'
+          },
+          {
+            title: 'वरिष्ठ सॉफ्टवेयर इंजीनियर – CoreTechies',
+            period: '2013–2017',
+            description: 'PHP/Laravel विकास, UI/UX डिज़ाइन, बहु-परियोजना प्रबंधन।'
+          }
+        ]
+      },
       education: {
         title: 'शिक्षा',
         subtitle: 'मेरी शैक्षणिक पृष्ठभूमि',
-        degree: 'कंप्यूटर विज्ञान में प्रौद्योगिकी स्नातक',
-        institution: 'प्रौद्योगिकी विश्वविद्यालय',
-        year: '2019 - 2023',
-        description: 'सॉफ्टवेयर इंजीनियरिंग और वेब विकास में विशेषज्ञता। सम्मान के साथ स्नातक।'
+        degree: 'बी.टेक – कंप्यूटर विज्ञान इंजीनियरिंग',
+        institution: 'राजस्थान तकनीकी विश्वविद्यालय, कोटा',
+        year: '2009 - 2013',
+        description: 'अंतिम वर्ष परियोजना: सार्वजनिक/निजी कुंजी का उपयोग करते हुए क्रिप्टोग्राफी'
       },
       projects: {
         title: 'परियोजनाएं',
-        subtitle: 'मेरे हाल के कुछ काम'
+        subtitle: 'एनालिटिक्स, वेब एप्लिकेशन और मोबाइल ऐप्स',
+        categories: ['एनालिटिक्स और डैशबोर्ड', 'वेब परियोजनाएं', 'मोबाइल ऐप्स']
+      },
+      highlights: {
+        title: 'मुख्य विशेषताएं',
+        items: [
+          'डिवीजनल और मुख्यालय रेलवे टीमों द्वारा उपयोग किए जाने वाले 15+ डैशबोर्ड बनाए',
+          'संचालन, सुरक्षा और एनालिटिक्स के लिए 10+ वेब सिस्टम (Laravel/Python) बनाए',
+          'फ्लटर का उपयोग करके कई मोबाइल ऐप विकसित किए',
+          'MMCT डिवीजन में डिजिटल परिवर्तन पहल का नेतृत्व किया',
+          'कर्मचारी डिजिटल प्रशिक्षण आयोजित किया (लॉकडाउन के दौरान 500+ दैनिक प्रतिभागी)'
+        ]
       },
       contact: {
         title: 'संपर्क करें',
@@ -86,36 +160,172 @@ function App() {
 
   const skills = [
     { name: 'Python', icon: faPython, color: '#3776AB' },
+    { name: 'Power BI', icon: faCode, color: '#F2C811' },
     { name: 'JavaScript', icon: faJs, color: '#F7DF1E' },
     { name: 'React', icon: faReact, color: '#61DAFB' },
+    { name: 'Laravel', icon: faCode, color: '#FF2D20' },
+    { name: 'Flutter', icon: faCode, color: '#02569B' },
     { name: 'Node.js', icon: faNode, color: '#339933' },
     { name: 'Docker', icon: faDocker, color: '#2496ED' },
     { name: 'Git', icon: faGit, color: '#F05032' },
+    { name: 'SQL', icon: faCode, color: '#4479A1' },
+    { name: 'Firebase', icon: faCode, color: '#FFCA28' },
+    { name: 'Bootstrap', icon: faCode, color: '#7952B3' },
   ]
 
-  const projects = [
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce application with payment integration and real-time inventory management.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com/himmsrathore',
-      demo: 'https://demo.example.com'
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates and team collaboration features.',
-      technologies: ['React', 'Firebase', 'Material-UI'],
-      github: 'https://github.com/himmsrathore',
-      demo: 'https://demo.example.com'
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'Real-time weather tracking application with interactive maps and detailed forecasts.',
-      technologies: ['JavaScript', 'OpenWeather API', 'Chart.js'],
-      github: 'https://github.com/himmsrathore',
-      demo: 'https://demo.example.com'
-    }
-  ]
+  const projectsData = {
+    'Analytics & Dashboards': [
+      {
+        title: 'Block Productivity Analysis – Engineering',
+        description: 'Analysis of machine utilization, falling productivity, and KPI-based recommendations for engineering operations.',
+        technologies: ['Looker Studio', 'Data Analytics', 'KPI Tracking'],
+        link: 'https://datastudio.google.com/reporting/22f59a49-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
+        type: 'dashboard'
+      },
+      {
+        title: 'Online Engine Book – BL Interchange Dashboard',
+        description: 'Real-time interchange monitoring, PU position tracking, loading analysis, and daily report automation.',
+        technologies: ['Looker Studio', 'Real-time Data', 'Automation'],
+        link: 'https://datastudio.google.com/reporting/f9e11ec6-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
+        type: 'dashboard'
+      },
+      {
+        title: 'HDN Speed Analysis Dashboard',
+        description: 'Network speed KPIs, restrictions monitoring, and section-wise performance analysis for railway operations.',
+        technologies: ['Looker Studio', 'Performance Analytics', 'Network Monitoring'],
+        link: 'https://datastudio.google.com/reporting/dfcd7114-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
+        type: 'dashboard'
+      },
+      {
+        title: 'DRM IT Cell Analytics Dashboard',
+        description: 'Division-level data insights and analytics for decision-making support at divisional management level.',
+        technologies: ['Looker Studio', 'Business Intelligence', 'Decision Support'],
+        link: 'https://datastudio.google.com/reporting/349530f9-d5e5-4e5e-9e5e-5e5e5e5e5e5e',
+        type: 'dashboard'
+      },
+      {
+        title: 'CRIS Internal Analytics Portal',
+        description: 'Comprehensive operational dashboards and analytics platform for Indian Railways internal operations.',
+        technologies: ['Python', 'Power BI', 'Data Engineering'],
+        link: 'https://analytics.cris.org.in',
+        type: 'internal'
+      }
+    ],
+    'Web Projects': [
+      {
+        title: 'eOPT GBCT – Unusual Reporting System',
+        description: 'Real-time unusual reporting and analysis system with asset failure tracking, PDF generation, and dashboard analytics.',
+        technologies: ['Laravel', 'MySQL', 'PDF Generation', 'Analytics'],
+        link: 'https://www.eoptgbct.in',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'MyCBT – Railway LDCE Exam Platform',
+        description: 'Comprehensive exam preparation platform with 150+ tests, 10,000+ questions, analytics, videos, and community features.',
+        technologies: ['Laravel', 'MySQL', 'Analytics', 'Video Platform'],
+        link: 'https://mycbt.in',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'Rawla – Community Platform',
+        description: 'Profile network system designed for community members to connect and collaborate.',
+        technologies: ['Laravel', 'MySQL', 'Social Network'],
+        link: 'https://rawla.in',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: '7Step – Learning & Earning Platform',
+        description: 'Technology learning platform with modules, dashboards, user analytics, and earning opportunities.',
+        technologies: ['Laravel', 'MySQL', 'Analytics', 'E-learning'],
+        link: 'https://7step.in',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'Western Railway Library',
+        description: 'Digital library platform for Western Railway with comprehensive book management and user access system.',
+        technologies: ['Laravel', 'MySQL', 'Library Management'],
+        link: 'https://books.mycbt.in',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'myLibrary – Smart Library Management',
+        description: 'Complete library management system with seat booking, attendance tracking, membership payments, and admin panel.',
+        technologies: ['Laravel', 'MySQL', 'Payment Integration', 'Booking System'],
+        link: 'https://library.7step.in',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'Online Safety & Inspection System',
+        description: 'Automated SS/TI/LC inspections with PDF email generation and real-time compliance monitoring.',
+        technologies: ['Laravel', 'MySQL', 'PDF Generation', 'Email Automation'],
+        link: '#',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'e-Election Module – MMCT Division',
+        description: 'Secure election management system with voting, results processing, and comprehensive dashboards.',
+        technologies: ['Laravel', 'MySQL', 'Security', 'Voting System'],
+        link: '#',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'EMU Maintenance Module',
+        description: 'Maintenance workflow management system for EMU Shed MMCT operations.',
+        technologies: ['Laravel', 'MySQL', 'Workflow Management'],
+        link: '#',
+        github: 'https://github.com/himmsrathore'
+      },
+      {
+        title: 'Operating Department Portal',
+        description: 'Digitized operational workflows platform for railway staff and department operations.',
+        technologies: ['Laravel', 'MySQL', 'Workflow Automation'],
+        link: 'http://10.34.2.55/assets/deppt/Operating/',
+        github: 'https://github.com/himmsrathore'
+      }
+    ],
+    'Mobile Apps': [
+      {
+        title: 'myLibrary Mobile App',
+        description: 'Mobile application for library management with seat booking and membership features.',
+        technologies: ['Flutter', 'Dart', 'Firebase'],
+        link: '#',
+        github: 'https://github.com/himmsrathore',
+        status: 'Coming Soon'
+      },
+      {
+        title: 'CBT Preparation App',
+        description: 'Mobile exam preparation app for railway competitive exams with offline support.',
+        technologies: ['Flutter', 'Dart', 'SQLite'],
+        link: '#',
+        github: 'https://github.com/himmsrathore',
+        status: 'Coming Soon'
+      },
+      {
+        title: 'Rawla App (Beta)',
+        description: 'Mobile version of the Rawla community platform for on-the-go networking.',
+        technologies: ['Flutter', 'Dart', 'REST API'],
+        link: '#',
+        github: 'https://github.com/himmsrathore',
+        status: 'Coming Soon'
+      },
+      {
+        title: '7Step Learning App',
+        description: 'Mobile learning platform for technology courses and skill development.',
+        technologies: ['Flutter', 'Dart', 'Video Streaming'],
+        link: '#',
+        github: 'https://github.com/himmsrathore',
+        status: 'Coming Soon'
+      },
+      {
+        title: 'Internal CRIS Utilities',
+        description: 'Python and Flutter based utility tools for internal CRIS operations.',
+        technologies: ['Flutter', 'Python', 'Dart'],
+        link: '#',
+        github: 'https://github.com/himmsrathore',
+        status: 'Coming Soon'
+      }
+    ]
+  }
 
   return (
     <div className={`portfolio ${theme}`} data-theme={theme}>
@@ -158,7 +368,7 @@ function App() {
                 <a href="https://linkedin.com/in/himmsrathore" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-lg">
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href="mailto:himmat@example.com" className="btn btn-outline-danger btn-lg">
+                <a href="mailto:himmsrathore@gmail.com" className="btn btn-outline-danger btn-lg">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </a>
               </div>
@@ -218,6 +428,34 @@ function App() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section className="section-padding">
+        <div className="container-fluid px-4">
+          <div className="row justify-content-center mb-4">
+            <div className="col-12 text-center">
+              <div className="section-icon mb-3">
+                <FontAwesomeIcon icon={faBriefcase} />
+              </div>
+              <h2 className="section-title">{t.experience.title}</h2>
+              <p className="section-subtitle text-muted">{t.experience.subtitle}</p>
+            </div>
+          </div>
+          <div className="row g-4 justify-content-center">
+            {t.experience.jobs.map((job, index) => (
+              <div key={index} className="col-lg-10">
+                <div className="card shadow-sm border-0">
+                  <div className="card-body p-4">
+                    <h5 className="card-title fw-bold mb-2">{job.title}</h5>
+                    <p className="text-primary mb-3">{job.period}</p>
+                    <p className="card-text text-muted mb-0">{job.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Education Section */}
       <section className="section-padding">
         <div className="container-fluid px-4">
@@ -251,36 +489,80 @@ function App() {
           <div className="row justify-content-center mb-4">
             <div className="col-12 text-center">
               <div className="section-icon mb-3">
-                <FontAwesomeIcon icon={faBriefcase} />
+                <FontAwesomeIcon icon={faCode} />
               </div>
               <h2 className="section-title">{t.projects.title}</h2>
               <p className="section-subtitle text-muted">{t.projects.subtitle}</p>
             </div>
           </div>
-          <div className="row g-4 justify-content-center">
-            {projects.map((project, index) => (
-              <div key={index} className="col-md-6 col-lg-4">
-                <div className="card project-card h-100 shadow-sm border-0">
-                  <div className="card-body d-flex flex-column">
-                    <h5 className="card-title fw-bold mb-3">{project.title}</h5>
-                    <p className="card-text text-muted flex-grow-1">{project.description}</p>
-                    <div className="mb-3">
-                      {project.technologies.map((tech, i) => (
-                        <span key={i} className="badge bg-primary bg-opacity-10 text-primary me-2 mb-2">{tech}</span>
-                      ))}
-                    </div>
-                    <div className="d-flex gap-2">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
-                        <FontAwesomeIcon icon={faGithub} className="me-1" /> Code
-                      </a>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-                        Live Demo
-                      </a>
+
+          {/* Project Categories */}
+          {Object.entries(projectsData).map(([category, projects], catIndex) => (
+            <div key={catIndex} className="mb-5">
+              <h3 className="text-center mb-4 fw-bold">{category}</h3>
+              <div className="row g-4 justify-content-center">
+                {projects.map((project, index) => (
+                  <div key={index} className="col-md-6 col-lg-4">
+                    <div className="card project-card h-100 shadow-sm border-0">
+                      <div className="card-body d-flex flex-column">
+                        <h5 className="card-title fw-bold mb-3">{project.title}</h5>
+                        {project.status && (
+                          <span className="badge bg-warning text-dark mb-2 align-self-start">{project.status}</span>
+                        )}
+                        <p className="card-text text-muted flex-grow-1">{project.description}</p>
+                        <div className="mb-3">
+                          {project.technologies.map((tech, i) => (
+                            <span key={i} className="badge bg-primary bg-opacity-10 text-primary me-2 mb-2">{tech}</span>
+                          ))}
+                        </div>
+                        <div className="d-flex gap-2">
+                          {project.link && project.link !== '#' && (
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
+                              {project.type === 'dashboard' ? 'View Dashboard' : project.type === 'internal' ? 'Internal Portal' : 'Live Demo'}
+                            </a>
+                          )}
+                          {project.github && (
+                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary btn-sm">
+                              <FontAwesomeIcon icon={faGithub} className="me-1" /> Code
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Highlights Section */}
+      <section className="section-padding">
+        <div className="container-fluid px-4">
+          <div className="row justify-content-center mb-4">
+            <div className="col-12 text-center">
+              <div className="section-icon mb-3">
+                <FontAwesomeIcon icon={faBriefcase} />
+              </div>
+              <h2 className="section-title">{t.highlights.title}</h2>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="card shadow-sm border-0">
+                <div className="card-body p-4">
+                  <ul className="list-unstyled mb-0">
+                    {t.highlights.items.map((item, index) => (
+                      <li key={index} className="mb-3 d-flex align-items-start">
+                        <span className="text-primary me-3">✓</span>
+                        <span className="text-muted">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -295,7 +577,7 @@ function App() {
               </div>
               <h2 className="section-title">{t.contact.title}</h2>
               <p className="section-subtitle text-muted mb-4">{t.contact.subtitle}</p>
-              <a href="mailto:himmat@example.com" className="btn btn-primary btn-lg">
+              <a href="mailto:himmsrathore@gmail.com" className="btn btn-primary btn-lg">
                 <FontAwesomeIcon icon={faEnvelope} className="me-2" /> {t.contact.button}
               </a>
             </div>
