@@ -9,7 +9,10 @@ import {
   faGithub, faLinkedin, faReact, faPython, faJs, faNode, faDocker, faGitAlt, faLaravel, faBootstrap, faFlutter,
 } from '@fortawesome/free-brands-svg-icons'
 import Shell from './Shell.jsx'
+import WhiteHawk from './WhiteHawk.jsx'
 import './App.css'
+
+const WH_ROUTE = '#/whitehawk'
 
 const content = {
   en: {
@@ -540,7 +543,8 @@ function App() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <span>© {new Date().getFullYear()} {t.name}. {t.footer}</span>
+          {/* Secret: a single click on the © opens the WhiteHawk profile */}
+          <span><span onClick={() => { window.location.hash = WH_ROUTE }}>©</span> {new Date().getFullYear()} {t.name}. {t.footer}</span>
           <div className="socials">
             {socials.map((s) => (
               <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
@@ -556,4 +560,24 @@ function App() {
   )
 }
 
-export default App
+// Tiny hash router: "#/whitehawk" shows the hidden WhiteHawk profile,
+// everything else (including #about, #work…) is the main portfolio.
+function Root() {
+  const [hidden, setHidden] = useState(() => window.location.hash === WH_ROUTE)
+
+  useEffect(() => {
+    const onHash = () => setHidden(window.location.hash === WH_ROUTE)
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+
+  const exit = useCallback(() => {
+    history.pushState('', document.title, window.location.pathname + window.location.search)
+    setHidden(false)
+    window.scrollTo(0, 0)
+  }, [])
+
+  return hidden ? <WhiteHawk onExit={exit} /> : <App />
+}
+
+export default Root

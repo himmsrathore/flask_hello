@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     // Forward /api calls to the local Flask server during development
     proxy: {
-      '/api': 'http://127.0.0.1:5000',
+      // Override with API_URL if port 5000 is busy, e.g. API_URL=http://127.0.0.1:5001
+      '/api': process.env.API_URL || 'http://127.0.0.1:5000',
     },
   },
 })
